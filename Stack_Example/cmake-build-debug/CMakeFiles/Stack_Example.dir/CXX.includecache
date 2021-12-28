@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Stack_Example/LinkedList.cpp
+clocale
+-
+LinkedList.h
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Stack_Example/LinkedList.h
+
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Stack_Example/LinkedList.h
+string
+-
+Node.h
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Stack_Example/Node.h
+
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Stack_Example/Node.h
+

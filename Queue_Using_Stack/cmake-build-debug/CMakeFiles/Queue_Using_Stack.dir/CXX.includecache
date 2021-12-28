@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Queue_Using_Stack/main.cpp
+iostream
+-
+stack
+-
+

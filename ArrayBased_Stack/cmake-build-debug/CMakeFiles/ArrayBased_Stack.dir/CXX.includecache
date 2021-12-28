@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/ArrayBased_Stack/main.cpp
+iostream
+-
+

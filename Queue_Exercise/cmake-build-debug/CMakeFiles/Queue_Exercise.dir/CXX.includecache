@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Queue_Exercise/MyCircularQueue.h
+Node.h
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Queue_Exercise/Node.h
+
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Queue_Exercise/Node.h
+string
+-
+
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Queue_Exercise/main.cpp
+iostream
+-
+MyCircularQueue.h
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Queue_Exercise/MyCircularQueue.h
+

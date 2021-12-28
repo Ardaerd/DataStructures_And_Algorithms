@@ -1,0 +1,4 @@
+"C:\CLion\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" C:\Users\arda\OneDrive\Cs_201_Lesson\DataStructure_And_Algorithms\Stack_Example
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Stack_Example/cmake-build-debug

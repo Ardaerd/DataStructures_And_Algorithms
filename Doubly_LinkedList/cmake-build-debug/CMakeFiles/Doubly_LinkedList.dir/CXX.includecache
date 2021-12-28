@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Doubly_LinkedList/Doubly_LinkedList.cpp
+Doubly_LinkedList.h
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Doubly_LinkedList/Doubly_LinkedList.h
+
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Doubly_LinkedList/Doubly_LinkedList.h
+Node.h
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Doubly_LinkedList/Node.h
+clocale
+-
+iostream
+-
+
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/Doubly_LinkedList/Node.h
+
