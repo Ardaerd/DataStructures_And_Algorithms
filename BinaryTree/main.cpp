@@ -11,14 +11,17 @@ int main() {
     root = root->insert(root,12);
     root = root->insert(root,18);
     root = root->insert(root,5);
+    root = root->insert(root,11);
 
     cout << "Root: " << root->data << endl;
+
+    //root->Delete(root,10);
 
     int num;
     cout << "Enter the number you wanna check: ";
     cin >> num;
 
-    if(root->search(root,num))
+    if(root->search(root,num) != NULL)
         cout << num << " is exist in our binary tree" << endl;
     else
         cout << num << " is not exist in our binary tree" << endl;
@@ -30,7 +33,11 @@ int main() {
     cout << "Is this tree is a binary tree: " << root->IsBinarySearchTree(root) << endl;
     cout << "For second check implementation: " << root->IsBstUtil(root,root->findMin(root)->data,root->findMax(root)->data) << endl; // This is not working
 
-    root->Delete(root,5);
+    int child;
+    cout << "Enter a number: ";
+    cin >> child;
+
+    cout << "Successor of " << child << ": " << root->Getsuccessor(root,child)->data << endl;
 
     return 0;
 }

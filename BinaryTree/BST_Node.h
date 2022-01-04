@@ -12,7 +12,8 @@ class BST_Node {
        BST_Node* insert(BST_Node* root,int data);
        BST_Node* GetNewNode(int data);
        BST_Node* Delete(BST_Node* root,int data);
-       bool search(BST_Node* root,int data);
+       BST_Node* Getsuccessor(BST_Node* root,int data);
+       BST_Node* search(BST_Node* root,int data);
        BST_Node* findMin(BST_Node* root);
        BST_Node* findMax(BST_Node* root);
        int findHeight(BST_Node* root);

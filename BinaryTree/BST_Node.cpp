@@ -15,12 +15,12 @@ BST_Node* BST_Node :: GetNewNode(int data) {
     return newNode;
 }
 
-bool BST_Node :: search(BST_Node* root,int data) {
+BST_Node* BST_Node :: search(BST_Node* root,int data) {
     if (root == NULL)
-        return false;
+        return NULL;
 
     else if (root->data == data)
-        return true;
+        return root;
 
     else if (data <= root->data)
         return search(root->left,data);
@@ -184,5 +184,33 @@ BST_Node* BST_Node :: Delete(BST_Node* root,int data) {
 
         cout << "New root: " << root->data << endl;
         return root;
+    }
+}
+
+// Function to find Inorder Successor in a BST
+BST_Node* BST_Node :: Getsuccessor(BST_Node *root, int data) {
+    // Search the Node - O(h)
+    BST_Node* current = search(root,data);
+
+    if (current == NULL)
+        return NULL;
+
+    // Case 1: Node has right subtree
+    if (current->right != NULL)
+        return findMin(current->right); // O(h)
+
+    // Case 2: No right subtree - O(h)
+    else {
+        BST_Node* successor = NULL;
+        BST_Node* ancestor = root;
+
+        while (ancestor != current) {
+            if (current->data < ancestor->data) {
+                successor = ancestor; // so far this is the deepest node for which current node is in left
+                ancestor = ancestor->left;
+            } else
+                ancestor = ancestor->right;
+        }
+        return successor;
     }
 }
