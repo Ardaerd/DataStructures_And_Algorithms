@@ -54,7 +54,21 @@ BST_Node* BST_Node :: insert(BST_Node* root, int data) {
     return root;
 }
 
-int BST_Node ::findMin(BST_Node* root) {
+int BST_Node :: findMax(BST_Node *root) {
+    if (root == NULL) {
+        cout << "WARNING: Tree is empty!" << endl;
+        return -1;
+    }
+
+    BST_Node* current = root;
+
+    while (current->right != NULL)
+        current = current->right;
+
+    return current->data;
+}
+
+int BST_Node :: findMin(BST_Node* root) {
     if (root == NULL) {
         cout << "WARNING: Tree is empty!" << endl;
         return -1;
@@ -66,4 +80,58 @@ int BST_Node ::findMin(BST_Node* root) {
         current = current->left;
 
     return current->data;
+}
+
+int BST_Node :: findHeight(BST_Node *root) {
+    if (root == NULL)
+        return -1;
+
+    return max(findHeight(root->left), findHeight(root->right)) + 1;
+}
+
+bool BST_Node ::IsSubtreeLesser(BST_Node *root, int data) {
+    if (root == NULL)
+        return true;
+
+    if ((root->data <= data) && IsSubtreeLesser(root->left,data) && IsSubtreeLesser(root->right,data))
+        return true;
+
+    else
+        return false;
+}
+
+bool BST_Node :: IsSubtreeGreater(BST_Node *root, int data) {
+    if (root == NULL)
+        return true;
+
+    if ((root->data > data) && IsSubtreeGreater(root->left,data) && IsSubtreeGreater(root->right,data))
+        return true;
+
+    else
+        return false;
+}
+
+bool BST_Node :: IsBinarySearchTree(BST_Node *root) {
+    if (root == NULL)
+        return true;
+
+    if (IsSubtreeLesser(root->left,root->data) && IsSubtreeGreater(root->right,root->data)
+         && IsBinarySearchTree(root->left) && IsBinarySearchTree(root->right))
+        return true;
+
+    else
+        return false;
+}
+
+// It is a different approach to check is it a binary tree or not
+bool BST_Node :: IsBstUtil(BST_Node* root,int minVal,int maxVal) {
+    if (root == NULL)
+        return true;
+
+    if ((root->data > minVal) && (root->data < maxVal) && IsBstUtil(root->left,minVal,root->data)
+        && IsBstUtil(root->right,root->data,maxVal))
+        return true;
+
+    else
+        return false;
 }

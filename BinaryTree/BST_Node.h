@@ -13,6 +13,12 @@ class BST_Node {
        BST_Node* GetNewNode(int data);
        bool search(BST_Node* root,int data);
        int findMin(BST_Node* root);
+       int findMax(BST_Node* root);
+       int findHeight(BST_Node* root);
+       bool IsBinarySearchTree(BST_Node* root);
+       bool IsSubtreeLesser(BST_Node* root,int data);
+       bool IsSubtreeGreater(BST_Node* root,int data);
+       bool IsBstUtil(BST_Node* root,int minVal,int maxVal);
 };
 
 #endif
