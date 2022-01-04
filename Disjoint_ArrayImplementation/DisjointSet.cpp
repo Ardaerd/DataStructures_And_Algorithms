@@ -3,7 +3,6 @@
 
 DisjointSet :: DisjointSet (int n) {
     parent = new int[n];
-    rank = new int[n];
     this->n = n;
     makeSet();
 }

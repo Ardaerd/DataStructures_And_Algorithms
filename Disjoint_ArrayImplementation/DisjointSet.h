@@ -6,7 +6,6 @@ using namespace std;
 class DisjointSet {
     public:
        int* parent;
-       int* rank;
        int n;
        DisjointSet(int);
        void makeSet();
