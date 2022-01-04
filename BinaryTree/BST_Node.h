@@ -11,6 +11,7 @@ class BST_Node {
        BST_Node(int data);
        BST_Node* insert(BST_Node* root,int data);
        BST_Node* GetNewNode(int data);
+       bool search(BST_Node* root,int data);
 };
 
 #endif

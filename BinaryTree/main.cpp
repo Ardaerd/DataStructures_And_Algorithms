@@ -11,8 +11,16 @@ int main() {
     root = root->insert(root,12);
     root = root->insert(root,18);
 
-
     cout << "Root: " << root->data << endl;
+
+    int num;
+    cout << "Enter the number you wanna check: ";
+    cin >> num;
+
+    if(root->search(root,num))
+        cout << num << " is exist in our binary tree" << endl;
+    else
+        cout << num << " is not exist in our binary tree" << endl;
 
     return 0;
 }

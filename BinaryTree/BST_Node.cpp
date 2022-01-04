@@ -15,6 +15,20 @@ BST_Node* BST_Node :: GetNewNode(int data) {
     return newNode;
 }
 
+bool BST_Node :: search(BST_Node* root,int data) {
+    if (root == NULL)
+        return false;
+
+    else if (root->data == data)
+        return true;
+
+    else if (data <= root->data)
+        return search(root->left,data);
+
+    else
+        return search(root->right,data);
+}
+
 BST_Node* BST_Node :: insert(BST_Node* root, int data) {
     if (root == NULL)
         root = GetNewNode(data);
