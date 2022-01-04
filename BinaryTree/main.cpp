@@ -22,5 +22,7 @@ int main() {
     else
         cout << num << " is not exist in our binary tree" << endl;
 
+    cout << "Min element in the tree: " << root->findMin(root);
+
     return 0;
 }

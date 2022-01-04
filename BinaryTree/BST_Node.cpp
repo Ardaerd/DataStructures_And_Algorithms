@@ -53,3 +53,17 @@ BST_Node* BST_Node :: insert(BST_Node* root, int data) {
 
     return root;
 }
+
+int BST_Node ::findMin(BST_Node* root) {
+    if (root == NULL) {
+        cout << "WARNING: Tree is empty!" << endl;
+        return -1;
+    }
+
+    BST_Node* current = root;
+
+    while (current->left != NULL)
+        current = current->left;
+
+    return current->data;
+}

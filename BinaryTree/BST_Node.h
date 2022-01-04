@@ -12,6 +12,7 @@ class BST_Node {
        BST_Node* insert(BST_Node* root,int data);
        BST_Node* GetNewNode(int data);
        bool search(BST_Node* root,int data);
+       int findMin(BST_Node* root);
 };
 
 #endif
