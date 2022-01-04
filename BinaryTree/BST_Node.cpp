@@ -20,13 +20,21 @@ BST_Node* BST_Node :: insert(BST_Node* root, int data) {
         root = GetNewNode(data);
 
     else if (data <= root->data) {
-        root->left = insert(root->left,data);
-        cout << "left child of " << root->data << ": " << root->left->data << endl;
+        if (root->left == NULL) {
+            root->left = insert(root->left,data);
+            cout << "left child of " << root->data << ": " << root->left->data << endl;
+        }
+        else
+            root->left = insert(root->left,data);
     }
 
     else {
-        root->right = insert(root->right,data);
-        cout << "right child of " << root->data << ": " << root->right->data << endl;
+        if (root->right == NULL) {
+            root->right = insert(root->right,data);
+            cout << "right child of " << root->data << ": " << root->right->data << endl;
+        }
+        else
+            root->right = insert(root->right,data);
     }
 
     return root;
