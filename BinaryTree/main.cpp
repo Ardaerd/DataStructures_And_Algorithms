@@ -23,12 +23,14 @@ int main() {
     else
         cout << num << " is not exist in our binary tree" << endl;
 
-    cout << "Min element in the tree: " << root->findMin(root) << endl;
-    cout << "Max element in the tree: " << root->findMax(root) << endl;
+    cout << "Min element in the tree: " << root->findMin(root)->data << endl;
+    cout << "Max element in the tree: " << root->findMax(root)->data << endl;
     cout << "Height of the tree is: " << root->findHeight(root) << endl;
 
     cout << "Is this tree is a binary tree: " << root->IsBinarySearchTree(root) << endl;
-    cout << "For second check implementation: " << root->IsBstUtil(root,root->findMin(root),root->findMax(root)); // This is not working
+    cout << "For second check implementation: " << root->IsBstUtil(root,root->findMin(root)->data,root->findMax(root)->data) << endl; // This is not working
+
+    root->Delete(root,5);
 
     return 0;
 }

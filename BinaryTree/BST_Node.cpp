@@ -54,10 +54,10 @@ BST_Node* BST_Node :: insert(BST_Node* root, int data) {
     return root;
 }
 
-int BST_Node :: findMax(BST_Node *root) {
+BST_Node* BST_Node :: findMax(BST_Node *root) {
     if (root == NULL) {
         cout << "WARNING: Tree is empty!" << endl;
-        return -1;
+        return NULL;
     }
 
     BST_Node* current = root;
@@ -65,13 +65,13 @@ int BST_Node :: findMax(BST_Node *root) {
     while (current->right != NULL)
         current = current->right;
 
-    return current->data;
+    return current;
 }
 
-int BST_Node :: findMin(BST_Node* root) {
+BST_Node* BST_Node :: findMin(BST_Node* root) {
     if (root == NULL) {
         cout << "WARNING: Tree is empty!" << endl;
-        return -1;
+        return NULL;
     }
 
     BST_Node* current = root;
@@ -79,7 +79,7 @@ int BST_Node :: findMin(BST_Node* root) {
     while (current->left != NULL)
         current = current->left;
 
-    return current->data;
+    return current;
 }
 
 int BST_Node :: findHeight(BST_Node *root) {
@@ -134,4 +134,55 @@ bool BST_Node :: IsBstUtil(BST_Node* root,int minVal,int maxVal) {
 
     else
         return false;
+}
+
+BST_Node* BST_Node :: Delete(BST_Node* root,int data) {
+    if (root == NULL)
+        return root;
+
+    else if (data < root->data)
+        root->left = Delete(root->left,data);
+
+    else if (data > root->data)
+        root->right = Delete(root->right,data);
+
+    // Wohoooo.... I found you, Get ready to delete
+    else {
+        // Case 1: No child
+        if ((root->left == NULL) && (root->right == NULL)) {
+            delete root;
+            root = NULL;
+            return root;
+        }
+
+        // Case 2: One Child
+        else if (root->left == NULL) {
+            BST_Node* temp = root;
+
+            root = root->right;
+            delete temp;
+            cout << "New root: " << root->data << endl;
+            return root;
+        }
+
+        else if (root->right == NULL) {
+            BST_Node* temp = root;
+
+            root = root->left;
+            delete temp;
+            cout << "New root: " << root->data << endl;
+            return root;
+        }
+
+        // Case 3: 2 Children
+        else {
+            BST_Node* temp = findMin(root->right);
+
+            root->data = temp->data;
+            root->right = Delete(root->right,temp->data);
+        }
+
+        cout << "New root: " << root->data << endl;
+        return root;
+    }
 }
