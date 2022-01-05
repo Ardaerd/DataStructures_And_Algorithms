@@ -1,5 +1,5 @@
-#ifndef AVL_TREE_NODE_H
-#define AVL_TREE_NODE_H
+#ifndef _Node_
+#define _Node_
 
 class Node {
     public:

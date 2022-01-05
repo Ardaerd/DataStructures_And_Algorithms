@@ -1,12 +1,17 @@
-#ifndef AVL_TREE_AVL_TREE_H
-#define AVL_TREE_AVL_TREE_H
+#ifndef _AVL_Tree_
+#define _AVL_Tree_
 
-class AVTreeNode {
+#include <string>
+#include "Node.h"
+
+using namespace std;
+
+class AVL_Tree {
     public:
        int max(int a,int b);
        int height(Node* N);
        Node* newNode(int key);
-       Node* rightRotation(Node* y);
+       Node* rightRotate(Node* y);
        Node* leftRotate(Node* x);
        int getBalanceFactor(Node* N);
        Node* insertNode(Node* node, int key);
