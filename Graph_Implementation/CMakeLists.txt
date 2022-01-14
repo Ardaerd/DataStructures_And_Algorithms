@@ -3,4 +3,4 @@ project(Graph_Implementation)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Graph_Implementation main.cpp)
+add_executable(Graph_Implementation main.cpp Graph.h Graph.cpp)

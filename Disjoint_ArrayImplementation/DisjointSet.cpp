@@ -3,6 +3,7 @@
 
 DisjointSet :: DisjointSet (int n) {
     parent = new int[n];
+    rank = new int[n];
     this->n = n;
     makeSet();
 }
@@ -44,13 +45,18 @@ void DisjointSet :: Union(int x, int y) {
         return;
     }
 
-    else {
-        int temp = parent[x];
+   // Put smaller ranked item under
+   // bigger ranked item if ranks are different
+   if (rank[x_set] < rank[y_set])
+       parent[x_set] = y_set;
 
-        for (int i = 0; i < n; i++) {
-            if (parent[i] == temp)
-                parent[i] = parent[y];
-        }
-    }
+   else if (rank[x_set] > rank[y_set])
+       parent[y_set] = x_set;
+
+   // If ranks are same, then increment rank
+   else {
+       parent[y_set] = x_set;
+       rank[x_set]++;
+   }
 
 }

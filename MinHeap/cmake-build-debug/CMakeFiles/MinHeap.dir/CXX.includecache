@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/MinHeap/MinHeap.cpp
+iostream
+-
+climits
+-
+MinHeap.h
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/MinHeap/MinHeap.h
+
+C:/Users/arda/OneDrive/Cs_201_Lesson/DataStructure_And_Algorithms/MinHeap/MinHeap.h
+
